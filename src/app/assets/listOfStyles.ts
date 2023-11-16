@@ -11,4 +11,10 @@ export default {
 
   purple: "#a445ed",
   red: "#ff5252",
+
+  fonts: {
+    serif: "serif",
+    sansSerif: "sans-serif",
+    mono: "monospace",
+  },
 };

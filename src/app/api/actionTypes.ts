@@ -1,0 +1,4 @@
+export default {
+    TOGGLE_THEME: "TOGGLE_THEME",
+    TOGGLE_FONT: "TOGGLE_FONT"
+}
