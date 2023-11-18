@@ -19,6 +19,7 @@ export interface ITheme {
 export interface IMeaningDefinitions {
   definition: string;
   synonyms: string[];
+  example?: string;
   antonyms: string[];
 }
 

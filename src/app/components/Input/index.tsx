@@ -28,7 +28,6 @@ export default function () {
       const getWordRandom = await axios
         .get("https://random-word-api.vercel.app/api?words=1")
         .catch((err) => {
-          console.log("opa opa opa olha aonde chegamos");
           console.error(err);
         });
       await getDataWord(getWordRandom?.data[0]);

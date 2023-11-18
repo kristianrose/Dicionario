@@ -21,7 +21,7 @@ export const Container = styled.header`
   padding-bottom: 50px;
 `;
 
-export const ContainerNav = styled.div`
+export const ContainerNav = styled.div<{rtImg: string}>`
   display: flex;
   align-items: center;
 
@@ -30,6 +30,10 @@ export const ContainerNav = styled.div`
       width: 20px;
       height: 20px;
       margin-left: 16px;
+
+      transition: rotate .3s ease;
+      rotate: 0deg;
+      rotate: ${props => props.rtImg};
     }
   }
 

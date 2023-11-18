@@ -54,7 +54,7 @@ export default function () {
     <Styled.Container className="box">
       <Image width={32} src={imgBook} alt="logo" />
 
-      <Styled.ContainerNav>
+      <Styled.ContainerNav rtImg={theme ? "0deg" : "350deg"} >
         <Styled.Selected
           toggle={toggleSelect}
           ftColor={theme ? listStyles.white : listStyles.veryBlack}

@@ -2,15 +2,15 @@ import { useSelector } from "react-redux";
 import * as Styled from "./style";
 import { RootState } from "@/app/api/redux/configRedux";
 import { getDataWord } from "@/app/api/function";
-import { useEffect } from "react";
+import { IMeaningDefinitions } from "@/app/api/interface";
 
 interface IProps {
   title: string;
-  list: { text: string; subText?: string }[];
-  synonyms?: string[];
+  list: IMeaningDefinitions[];
+  synonyms: string[];
 }
 
-export default function ({ title, list, synonyms }: any) {
+export default function ({ title, list, synonyms }: IProps) {
   const { theme } = useSelector(
     (rootReducer: RootState) => rootReducer.useTheme
   );
@@ -23,7 +23,7 @@ export default function ({ title, list, synonyms }: any) {
         <span>Meaning</span>
 
         <ul>
-          {list.map((item: any) => (
+          {list.map((item: IMeaningDefinitions) => (
             <li key={item.definition}>
               <p>{item.definition}</p>
 
@@ -38,7 +38,8 @@ export default function ({ title, list, synonyms }: any) {
           Synonyms:{" "}
           {synonyms.map((word: string, index: number) => (
             <a href="#" onClick={() => getDataWord(word)}>
-              {word}{index < synonyms.length - 1 && (", ")} {" "}
+              {word}
+              {index < synonyms.length - 1 && ", "}{" "}
             </a>
           ))}
         </p>

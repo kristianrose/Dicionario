@@ -50,7 +50,6 @@ export async function getDataWord(word: string) {
       }
     });
 
-    console.log(item);
 
     listsMeaningCurrent.sourceUrl = item.sourceUrls[0]
       ? item.sourceUrls[0]
