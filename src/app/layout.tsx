@@ -5,8 +5,8 @@ import Providers from "./api/redux/provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dicionario",
-  description: "Dicionario online, busque o significado das palavras",
+  title: "Dictinary",
+  description: "Online Dictionary, look for the meaning of words",
   icons: {
     icon: "/favicon.ico?v=4",
     apple: "/apple-touch-icon.png?v=4",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="en-US">
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
