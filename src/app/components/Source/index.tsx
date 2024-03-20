@@ -12,11 +12,8 @@ export default function ({ sourceUrl }: { sourceUrl: string }) {
 
   return (
     <Styled.Container className="box" ftColor={theme ? "#ffffff" : "#2d2d2d"}>
-      <span>Source</span>
+      <span>All rights reserved to Froggy.pro 2024</span>
       <div>
-        <a href={sourceUrl} target="_blank">
-          {sourceUrl}
-        </a>
         <Image src={imgSource} alt="" />
       </div>
     </Styled.Container>
